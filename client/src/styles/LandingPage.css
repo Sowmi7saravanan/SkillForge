@@ -1,0 +1,127 @@
+.hero{
+
+    min-height:100vh;
+
+    background-image: url("../assets/study.jpeg");
+
+    background-size:cover;
+
+    background-position:center;
+
+    position:relative;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-align:center;
+
+    padding-top:80px;
+}
+
+.overlay{
+
+    position:absolute;
+
+    inset:0;
+
+    background:rgba(255,255,255,.82);
+}
+
+.hero-content{
+
+    position:relative;
+
+    z-index:2;
+
+    max-width:900px;
+
+    padding:20px;
+}
+
+.logo-name{
+
+    font-size:34px;
+
+    color:#2563eb;
+
+    margin-bottom:25px;
+}
+
+.hero h1{
+
+    font-size:68px;
+
+    margin-bottom:30px;
+
+    color:#1459ee;
+}
+
+.hero h3{
+
+    font-size:34px;
+
+    color:#04050c;
+
+    margin-bottom:30px;
+}
+
+.hero p{
+
+    font-size:24px;
+
+    color:
+    #097e96d8;
+
+    line-height:1.7;
+
+    margin-bottom:50px;
+
+    margin-top:20px;
+
+}
+
+.hero-buttons{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:30px;
+}
+
+.primary-btn{
+
+    background:#2563eb;
+
+    color:white;
+
+    border:none;
+
+    padding:18px 45px;
+
+    border-radius:10px;
+
+    font-size:20px;
+
+    cursor:pointer;
+}
+
+.secondary-btn{
+
+    background:white;
+
+    color:#2563eb;
+
+    border:2px solid #2563eb;
+
+    padding:18px 45px;
+
+    border-radius:10px;
+
+    font-size:20px;
+
+    cursor:pointer;
+}

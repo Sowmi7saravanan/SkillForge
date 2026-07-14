@@ -3,7 +3,20 @@ import "../styles/Navbar.css";
 function Navbar() {
   return (
     <nav>
-      <h2>SkillForge</h2>
+
+      <div className="brand">
+
+        <div className="logo">
+          SF
+        </div>
+
+      </div>
+
+      <div className="running-text">
+        <marquee>
+          An integrated platform that turns your practice into valuable skills.
+        </marquee>
+      </div>
 
       <ul>
         <li>Home</li>
@@ -11,10 +24,6 @@ function Navbar() {
         <li>About</li>
       </ul>
 
-      <div className="nav-buttons">
-        <button className="login-btn">Login</button>
-        <button className="signup-btn">Get Started</button>
-      </div>
     </nav>
   );
 }

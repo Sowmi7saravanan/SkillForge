@@ -1,36 +1,46 @@
 import Navbar from "../components/Navbar";
+import "../styles/LandingPage.css";
 
 function LandingPage() {
   return (
     <>
       <Navbar />
 
-      <main
-        style={{
-          textAlign: "center",
-          marginTop: "100px",
-        }}
-      >
-        <h1
-          style={{
-            fontSize: "55px",
-            marginBottom: "20px",
-          }}
-        >
-          Forge Your Coding Confidence
-        </h1>
+      <section className="hero">
 
-        <p
-          style={{
-            fontSize: "22px",
-            color: "#555",
-            marginTop: "30px",
-          }}
-        >
-          Every student deserves the right next challenge—not a difficulty
-          label.
-        </p>
-      </main>
+        <div className="overlay"></div>
+
+        <div className="hero-content">
+
+          <h1 className="logo-name">SkillForge</h1>
+
+          <h3>
+            Forge Your Coding Confidence
+          </h3>
+
+          <h2>
+            Practice smarter, not harder.
+          </h2>
+
+          <p>
+            AI-powered platform for coding practice, hackathons,
+            resumes, interview preparation and career growth
+            in one place.
+          </p>
+
+          <div className="hero-buttons">
+            <button className="primary-btn">
+              Get Started
+            </button>
+
+            <button className="secondary-btn">
+              Login
+            </button>
+          </div>
+
+        </div>
+
+      </section>
     </>
   );
 }
