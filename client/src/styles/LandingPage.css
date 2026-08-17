@@ -1,24 +1,18 @@
-.hero{
+.hero {
+    min-height: 100vh;
 
-    min-height:100vh;
 
-    background-image: url("../assets/study.jpeg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 
-    background-size:cover;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 
-    background-position:center;
-
-    position:relative;
-
-    display:flex;
-
-    justify-content:center;
-
-    align-items:center;
-
-    text-align:center;
-
-    padding-top:80px;
+    padding-top: 80px;
 }
 
 .overlay{
@@ -27,7 +21,7 @@
 
     inset:0;
 
-    background:rgba(255,255,255,.82);
+    background:rgba(255,255,255,.55);
 }
 
 .hero-content{
@@ -38,7 +32,7 @@
 
     max-width:900px;
 
-    padding:20px;
+    padding:40px;
 }
 
 .logo-name{
@@ -59,6 +53,11 @@
     color:#1459ee;
 }
 
+.hero h2{
+    font-size:35px;
+    color:#111827;
+}
+
 .hero h3{
 
     font-size:34px;
@@ -71,25 +70,19 @@
 .hero p{
 
     font-size:24px;
-
-    color:
-    #097e96d8;
-
+    color:#097e96d8;
     line-height:1.7;
-
-    margin-bottom:50px;
-
     margin-top:20px;
-
+    margin-bottom:50px;
 }
 
 .hero-buttons{
 
     display:flex;
-
     justify-content:center;
-
+    align-items:center;
     gap:30px;
+    margin-top:30px;
 }
 
 .primary-btn{
@@ -124,4 +117,70 @@
     font-size:20px;
 
     cursor:pointer;
+}
+.title{
+    margin-bottom:20px;
+}
+.heading{
+    margin-bottom:18px;
+}.tagline{
+    transition:0.3s;
+    cursor:pointer;
+    margin-bottom:18px;
+}
+
+.title:hover{
+    transform:translateY(-6px);
+    color:#2563eb;
+}
+
+.heading:hover{
+    transform:translateY(-5px);
+    color:#2563eb;
+}
+
+.tagline:hover{
+    transform:translateY(-4px);
+    color:#2563eb;
+}
+.description:hover{
+    transform:translateY(-3px);
+    color:#2563eb;
+    margin-bottom:45px;
+}
+.hero-content{
+    animation:fadeIn 1.2s ease;
+}
+
+@keyframes fadeIn{
+    from{
+        opacity:0;
+        transform:translateY(40px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+html{
+    scroll-behavior: smooth;
+}
+
+.section{
+    padding:100px 80px;
+    text-align:center;
+}
+
+.section h2{
+    font-size:42px;
+    margin-bottom:20px;
+    color:#2563eb;
+}
+
+.section p{
+    font-size:20px;
+    color:#555;
+    max-width:800px;
+    margin:auto;
+    line-height:1.8;
 }
