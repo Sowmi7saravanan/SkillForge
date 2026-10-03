@@ -5,6 +5,8 @@ import Login from "./pages/Login";
 import Signup from "./pages/Signup";
 import Setup from "./pages/Setup";
 import Dashboard from "./pages/Dashboard";
+import Coding from "./pages/Coding";
+import CodingQuestion from "./pages/CodingQuestion";
 
 function App() {
   return (
@@ -21,6 +23,14 @@ function App() {
         <Route path="/setup" element={<Setup />} />
 
         <Route path="/dashboard" element={<Dashboard />} />
+
+        <Route path="/coding" element={<Coding />} />
+
+        <Route
+    path="/coding/question"
+    element={<CodingQuestion />}
+/>
+
 
       </Routes>
 

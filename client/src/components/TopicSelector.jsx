@@ -1,48 +1,71 @@
+import { useNavigate } from "react-router-dom";
 import "./TopicSelector.css";
 
-function TopicSelector({ setSelectedTopic }) {
+function TopicSelector() {
 
-  const topics = [
-    "Arrays",
-    "Strings",
-    "Linked List",
-    "Stack",
-    "Queue",
-    "Trees",
-    "Graphs",
-    "Dynamic Programming",
-    "Recursion",
-    "Greedy",
-    "Sorting",
-    "Searching",
-  ];
+    const navigate = useNavigate();
 
-  return (
-    <div className="topic-box">
+    const topics = [
+        "Arrays",
+        "Strings",
+        "Linked List",
+        "Stack",
+        "Queue",
+        "Trees",
+        "Graphs",
+        "Dynamic Programming",
+        "Recursion",
+        "Greedy",
+        "Sorting",
+        "Searching"
+    ];
 
-      <h2>Select Your Learning Topic</h2>
 
-      <p>
-        Choose the topic you want to master today.
-      </p>
+    function selectTopic(topic) {
 
-      <div className="topic-grid">
+        localStorage.setItem(
+            "selectedTopic",
+            topic
+        );
 
-        {topics.map((topic) => (
+        navigate(
+            `/coding?topic=${encodeURIComponent(topic)}`
+        );
 
-          <button
-            key={topic}
-            onClick={() => setSelectedTopic(topic)}
-          >
-            {topic}
-          </button>
+    }
 
-        ))}
 
-      </div>
+    return (
 
-    </div>
-  );
+        <div className="topic-box">
+
+            <h2>
+                Select Your Learning Topic
+            </h2>
+
+            <p>
+                Choose the topic you want to work on today.
+            </p>
+
+
+            <div className="topic-grid">
+
+                {topics.map((topic) => (
+
+                    <button
+                        key={topic}
+                        onClick={() => selectTopic(topic)}
+                    >
+                        {topic}
+                    </button>
+
+                ))}
+
+            </div>
+
+        </div>
+
+    );
 }
 
 export default TopicSelector;
